@@ -1,0 +1,499 @@
+html{
+    height:-webkit-fill-available;
+}
+body{
+    padding:0;
+    margin:0;
+    min-height: 100vh;
+}
+
+@supports (-webkit-touch-callout:none){
+    body{
+        min-height:webkit-fill-available;
+    }
+}
+/**** MOBILE FIRST *****/
+
+@font-face {
+    font-family:'SedwickAveDisplay';
+    src: url('/fonts/SedgwickAveDisplay-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'Tanker';
+    src: url('/fonts/Tanker-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'Satoshi-Regular';
+    src: url('/fonts/Satoshi-Regular.ttf') format('truetype');
+}
+
+body{
+    font-family: 'Satoshi';
+    background-color: #FFFDF3;
+    margin: 0;
+}
+
+h1{
+    font-family: 'Tanker';
+    font-size: 2rem;
+  }
+
+ul{
+    list-style: none;
+    list-style-type:none;
+    margin-left:0;
+    padding-left:0;
+}
+
+li{
+    list-style-type:none;
+}
+
+section{
+      padding:50px 50px 50px 50px;
+
+}
+/* section Big-Title */
+.section-BigTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+}
+  
+.logo img{
+    width: 30rem;
+}
+
+  .zigzag {
+    position: relative;
+    height: 2rem;
+    z-index: 1;
+    margin-bottom:50px;
+  }
+  
+  .zigzag:before,
+  .zigzag:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .zigzag:before {
+    height: 12px;
+    top: 110%;
+    background: linear-gradient(-135deg, black 8px, transparent 0) 0 8px, linear-gradient( 135deg, black 8px, transparent 0) 0 8px;
+    background-position: top left;
+    background-repeat: repeat-x;
+    background-size: 16px 16px;
+  }
+
+  .zigzag:after {
+    height: 16px;
+    top: 100%;
+    background: linear-gradient(-135deg, #FFFDF3 8px, transparent 0) 0 8px, linear-gradient( 135deg, #FFFDF3 8px, transparent 0) 0 8px;
+    background-position: top left;
+    background-repeat: repeat-x;
+    background-size: 16px 16px;
+  }
+  
+  /* Fin section Big-Title */
+
+
+/* MENU */
+
+
+header {
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+    padding:0px 5px 0px 5px;
+}
+
+header a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.se-connecter{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    font-size: 12px;
+}
+
+.se-connecter i {
+    font-size:20px;
+}
+
+.menu-btn{
+    z-index:6;
+    cursor: pointer;
+    transform: scaleX(-1);
+    position: fixed;
+    right:5px;
+}
+
+.bar{
+    top: 50%;
+	left: 50%;
+	border-radius: 4px;
+    background-color: #FFFDF3;
+    margin-bottom: 5px;
+
+}
+
+.bar:nth-child(1){
+    width: 40px;
+	height: 3px;
+}
+
+.bar:nth-child(2){
+    width: 30px;
+	height: 3px;
+}
+
+.bar:nth-child(3){
+    width: 20px;
+	height: 3px;
+}
+
+.menu-btn.active  .bar{
+    background-color:black;
+} 
+
+img[alt="rond-noir"]{
+    position: absolute;
+    transform: scaleX(-1);
+    left: -25px;
+    top:-50px;
+    width: 250px;
+    z-index: -1
+
+}
+
+
+img[alt="rond-blanc"]{
+    display: none;
+    position: absolute;
+    left: -25px;
+    top:-50px;
+    transform: scaleX(-1);
+    width: 250px;
+    z-index: -1;
+}
+
+.menu-btn.active  img[alt="rond-pique"]{
+    display: none;   
+} 
+.menu-btn.active  img[alt="rond-blanc"]{
+    display: block;
+}  
+
+
+
+
+
+/* le menu qui apparait */
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    background: black;
+	transform: translateX(100%);
+	transition: transform 0.5s; 
+    z-index:5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'SedwickAveDisplay';
+    font-size:3rem;
+    text-align: center;
+    color: #FFFDF3;   
+}
+
+.nav.active {
+	transform: translateX(0);
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+}
+
+.icone-connexion__nav{
+    font-size: 2rem;
+    position: absolute;
+    top:5%;
+    left:5%;
+}
+
+.icone-connexion__nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.nav h1{
+    position: relative;
+    top:7.5rem;
+    z-index:4;
+    font-family: 'Tanker';
+}
+
+.nav img{
+    width: 15rem;
+}
+
+.nav__list li{
+    font-size: 2.5rem;
+}
+
+
+.nav__link{
+    text-decoration: none;
+    color: #FFFDF3;
+
+}
+.nav__link:hover{
+    background: linear-gradient(90deg, rgba(0,5,0,1) 0%, rgba(212,75,217,1) 0%, rgba(255,192,74,1) 59%, rgba(252,117,59,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* FIN MENU */
+
+/* section Big-Title */
+.section-BigTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    /* background-image: url(../image/taches.png); */
+    background-size: cover;
+    position: relative;
+}
+
+.logo img{
+    width: 20rem;
+}
+.logo h1{
+    font-family: 'SedwickAveDisplay';
+    font-size:4rem;
+    color:#171302;
+    text-align: center;
+}
+
+.section-BigTitle img[alt="tache-degrade"]{
+    position:absolute;
+    width:60%;
+    left:40%;
+    bottom:50%;
+    z-index: -1;
+  }
+  
+  .section-BigTitle img[alt="tache-violet"]{
+    position:absolute;
+    width:30%;
+    left:70%;
+    top:55%;
+    z-index: -1;
+    
+  }
+  
+  .section-BigTitle img[alt="tache-jaune"]{
+    position:absolute;
+    width:70%;
+    right:45%;
+    bottom:55%;
+    z-index: -1;
+   
+  }
+  
+   .section-BigTitle img[alt="tache-orange"]{
+    position:absolute;
+    width:40%;
+    left:20%;
+    bottom:30%;
+    z-index: -1;
+  
+    
+  }
+  .section-BigTitle img[alt="tache-violet2"]{
+    position:absolute;
+    width:65%;
+    right:70%;
+    bottom:20%;
+    z-index: -1;
+  
+    
+  }
+  
+  .section-BigTitle img[alt="tache-jaune2"]{
+    position:absolute;
+    width:75%;
+    right:5%;
+    top:60%;
+    z-index: -1;
+   
+  }
+
+  
+.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+  }
+  .visible {
+    opacity: 1;
+  }
+  
+  
+
+
+/* FOOTER */
+
+footer{
+    padding:10px 0px 10px 0px;
+    display: flex;
+	justify-content: center;
+    background-color:black ;
+    padding:15px;   
+    flex-direction: column;
+    align-items: center;
+    color:#FFFDF3;
+    height:250px;
+    text-align: center;
+}
+
+footer img{
+    width:5rem;
+}
+
+footer a {
+    text-decoration: none;
+    color:inherit;
+}
+
+/* FIN FOOTER */
+
+/***** FIN MOBILE FIRST *****/
+
+@media screen and (min-width: 768px) {
+
+    img[alt="rond-pique"]{
+        right:-25px;
+        top:-40px;
+        width:100px;
+    }
+    .icone-connexion__nav{
+        font-size: 3rem;
+        position: absolute;
+        top:5%;
+        left:5%;
+    }
+
+    .nav img{
+        width: 20rem;
+    }
+    
+    .nav__list li{
+        font-size: 3.5rem;
+    }
+
+    .section-BigTitle img[alt="tache-jaune2"]{
+        position:absolute;
+        width:75%;
+        right:5%;
+        top:40%;
+        z-index: -1;
+       
+      }
+
+    
+    footer{
+        gap:3rem;
+        padding:20px;
+    }
+    .footer-div1{
+        display: flex;
+        gap:10rem;
+    }
+    .footer-div2{
+        display: flex;
+        gap:10rem;
+        align-items: center;
+        font-size:0.75rem;
+ 
+    }
+
+    .order-title{
+        order:-1;
+    }
+
+    
+
+}
+
+@media screen and (min-width:1024px){
+
+
+.section-BigTitle img[alt="tache-degrade"]{
+    position:absolute;
+    width:40%;
+    left:50%;
+    bottom:40%;
+    z-index: -1;
+  }
+  
+  .section-BigTitle img[alt="tache-violet"]{
+    position:absolute;
+    width:20%;
+    left:80%;
+    top:40%;
+    z-index: -1;
+    
+  }
+  
+  .section-BigTitle img[alt="tache-jaune"]{
+    position:absolute;
+    width:50%;
+    right:45%;
+    bottom:45%;
+    z-index: -1;
+   
+  }
+  
+   .section-BigTitle img[alt="tache-orange"]{
+    position:absolute;
+    width:30%;
+    left:20%;
+    bottom:15%;
+    z-index: -1;
+  
+    
+  }
+  .section-BigTitle img[alt="tache-violet2"]{
+    position:absolute;
+    width:45%;
+    right:75%;
+    bottom:2%;
+    z-index: -1;
+  
+    
+  }
+  
+  .section-BigTitle img[alt="tache-jaune2"]{
+    position:absolute;
+    width:45%;
+    right:10%;
+    top:55%;
+    z-index: -1;
+   
+  }
+
+}

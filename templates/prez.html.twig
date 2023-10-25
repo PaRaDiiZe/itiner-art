@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block title %}Qui sommes-nous ?{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/qui.css') }}">
+{% endblock %}
+
+{% block titre %}
+<h1>Qui sommes-nous ?</h1>
+{% endblock %}
+
+
+{% block main %}
+<section class="sect">
+    <div class="test">
+        <div class="text_prez">
+            <h2>Nous sommes ...</h2>
+            <p>quelques étudiants fans de Street Art. Nous sommes basés sur Strasbourg, notre ville de cœur.
+                Cette passion, nous vous la partageons à travers de beaux parcours concoctés par nos soins.<br><br>Vous
+                aussi, venez découvrir Strasbourg à travers ses Street Art !</p>
+            <img class="image" src="{{ asset('image/parcours1.png') }}" alt="">
+            <img class="ok" src="{{ asset('image/traits/trait_fuschia.png')}}" alt="">
+            <img class="ok2" src="{{ asset('image/traits/trait_orange.png')}}" alt="">
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,173 @@
+body{
+    font-size:1rem;
+    margin:auto;
+    background-color: #FFFDF3;
+    font-family: 'satoshi';
+}
+
+
+.description{
+    width:75%;
+    margin: auto;
+    margin-top:50px;
+}
+@media screen and (min-width:1024px){
+    .description{
+        width:50%;
+    }
+}
+
+.decouv{
+    margin-top:50px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    padding-right:30px;
+}
+@media screen and (min-width:1024px){
+    .decouv{
+        padding-right:150px;
+    }
+    .decouv h4{
+        width:fit-content !important;
+        font-size:2rem !important;
+    }
+    .decouv i{
+        font-size:4rem !important;
+    }
+}
+.decouv h4{
+    width:200px;
+    font-weight: bold;
+    font-size:1.8rem;
+    padding-right:10px;
+}
+.decouv i{
+    font-size: 3rem;
+    color:#171302;
+}
+.decouv i:hover{
+    color:#F944FF;
+}
+
+.bg{
+    background-color: darkblue;
+    height:15%;
+}
+
+.formb{
+    margin-bottom:50px;
+    margin-left:15%;
+}
+
+.buttonform{
+    background-color: #FF8C00;
+    padding:5px 10px;
+    border:none;
+    border-radius: 20px;;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    text-align: center;
+}
+.btnfo{
+    background-color: transparent;
+    color:#FF8C00;
+    border: 1px solid #FF8C00;
+}
+.btnfo:hover{
+    color:#171302;
+    cursor: pointer;
+}
+
+.container-card{
+    display: flex;
+    flex-wrap: wrap;
+    width:75%;
+    margin: auto;
+}
+
+.card {
+    /* border:1px solid red; */
+    overflow:hidden;
+    border-radius: 25p;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    height:350px;
+    width:250px;
+    /* margin:auto; */
+    /* margin-bottom:50px; */
+    display:flex;
+    flex-direction: column;
+    margin:auto;
+}
+
+.card img{
+    height:70%;
+    object-fit:cover;
+}
+.card-cont{
+    background-image: url(../image/fond-oeuvres.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.9);
+    color:#FFFDF3;
+    height:30%;
+    padding-left:10%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom:5px;
+    padding-top:5px;
+    position:relative;
+}
+.card h4{
+    font-size:1.4rem;
+    font-weight: bold;
+    margin:0;
+}
+.card p{
+    margin:0;
+    margin-top:5px;
+}
+.cat{
+    font-style: italic;
+    font-size:0.8rem;
+}
+.card i{
+    position:absolute;
+    margin-right:5px;
+    margin-bottom:5px;
+    font-size:2.5rem;
+    bottom:0;
+    right:0;
+    color: #FFFDF3;
+}
+.card i:hover{
+    color:#F944FF;
+}
+
+
+.baqueron{
+    overflow:hidden;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    margin:auto;
+    /* margin-bottom:50px; */
+    height:400px;
+    width:300px;
+}
+
+.baqueron:hover{
+    /* color:red; */
+    background-image: url(../image/tache_degrade.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

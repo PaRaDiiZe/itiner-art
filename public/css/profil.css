@@ -1,0 +1,136 @@
+/**** MOBILE FIRST *****/
+
+/* section Profil */
+.section-Profil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap:3rem;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.mon-profil{
+    text-align: center;
+}
+
+.mon-profil i{
+    font-size:3rem;
+}
+
+.section-Profil span{
+    font-style: italic;
+}
+
+.infos{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    padding-top: 10px;
+}
+
+.btn-modif{
+    width: fit-content;
+    padding: 5px 10px 5px 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    background-color: #FFD700;
+}
+
+.btn-modif a{
+    text-decoration: none;
+    color:inherit;
+}
+
+.btn-suppr{
+     width: fit-content;
+    background-color: red;
+    color: white;
+    padding: 6px;
+    cursor: pointer;
+}
+
+/* Fin section Profil */
+
+/* section Commentaires */
+
+.section-Commentaires{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    padding:20px 50px 20px 50px;   
+}
+
+.section-Commentaires h2{
+    align-self: flex-start;
+}
+
+.title-comments{
+    text-align: center;
+}
+
+.comments{
+    width: 90%;
+    background-color:#fff1a2;
+    padding: 20px;
+    border-radius: 30px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.notation{
+    display: flex;
+    justify-content: space-between;
+}
+
+.notation i{
+    color:#FFD700
+}
+
+.modif-suppr{
+    display: flex;
+    gap:0.5rem;
+    position: absolute;
+    left: 75%;
+    top:95%;
+    cursor: pointer;
+}
+
+.modif-suppr i{
+ background-color:#FFD700;
+  font-size: 1rem;
+  padding:5px;
+  border-radius: 100%;
+  color: aliceblue;
+}
+
+/* Fin section Commentaires */
+
+/**** Fin MOBILE FIRST *****/
+
+@media screen and (min-width: 768px) {
+
+    .comments{
+        width: 70%;
+    }
+
+    .modif-suppr{
+        left: 80%;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .comments{
+        width: 50%;
+    }
+
+}

@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/connexion.css') }}">
+{% endblock %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block titre %}
+<h1>Connexion</h1>
+{% endblock %}
+
+{% block main %}
+    {# {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %} #}
+
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.pseudo }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+
+
+<section class="section-Connexion">
+    <div class="connexion">
+
+        <div class="profil">
+            <i class="bi bi-person-circle"></i>
+        </div>
+        <div class="bold">Se connecter</div>
+
+        <div class="formulaire">
+            <form id="connexion-form" method="post">
+                <input type="text" value="{{ last_username }}" placeholder="Username" name="pseudo" id="inputPseudo" class="form-control" autocomplete="username" required autofocus><br>
+
+                <input type="password" name="password" id="inputPassword" class="form-control"
+                    autocomplete="current-password" placeholder="Mot de passe" required><br>
+
+
+                <div class="control-group">
+                    <label class="control control-checkbox">
+                        Se souvenir de moi
+                        <input type="checkbox" name="_remember_me" />
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                <button type="submit" class="valider">Connexion</input>
+
+
+            </form>
+        </div>
+
+        <div class="inscription">
+            <div>Vous n'avez pas de compte ?</div>
+            <div><a href="{{path('app_register')}}">Inscrivez-vous</a></div>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

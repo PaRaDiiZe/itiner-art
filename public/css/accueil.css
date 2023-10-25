@@ -1,0 +1,606 @@
+/**** MOBILE FIRST *****/
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+/* section-Parcours */
+
+.arrow{
+  font-size: 2rem;
+}
+.section-Parcours{
+  min-height:100vh;
+  /* padding:50px 50px 50px 50px; */
+  position: relative;
+}
+
+
+.section-Parcours h2{
+  font-family: 'Tanker';
+  font-size: 2.5rem;
+}
+
+.list-parcours img{
+  display: block;
+}
+
+.stroke-text{
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+
+.decouvrez{
+  position: absolute;
+  top:10%;
+  left:15%;
+}
+
+.decouvrez h2{
+  position: absolute;
+  bottom:65%;
+}
+
+.nos{
+  position: absolute;
+  left:55%;
+  top:15%;
+}
+
+.nos img{
+  width:140px;
+}
+.nos h2{
+  position: absolute;
+  top:55%;
+  right:95%;
+  z-index: -1;
+}
+
+.parcours{
+  position: absolute;
+  top:45%;
+  left:29%;
+  text-align: center;
+}
+
+.parcours img{
+  width:200px
+}
+
+.parcours h2{
+  position: absolute;
+  top:60%;
+  left:16%;
+}
+
+.parcours .arrow{
+  margin-top:30px;
+}
+.parcours .arrow:hover{
+  color:#F944FF;
+}
+
+.section-Parcours .trait-fushia1{
+  position: absolute;
+  bottom: 90%;
+  left: 10%;
+  width:12%;
+  rotate: 180deg;
+}
+
+.section-Parcours .trait-jaune1{
+  position: absolute;
+  top: 5%;
+  left: 55%;
+  width:12%;
+
+}
+
+.section-Parcours .trait-orange1{
+  position: absolute;
+  top: 55%;
+  left: 10%;
+  width:12%;
+  rotate: -120deg;
+
+}
+
+.section-Parcours .trait-fushia2{
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  width:12%;
+  rotate: 80deg;
+}
+
+.section-Parcours .trait-jaune2{
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  width:12%;
+
+}
+
+.section-Parcours .trait-orange2{
+  position: absolute;
+  top: 70%;
+  left: 75%;
+  width:12%;
+
+}
+
+
+/* Fin section-parcours */
+
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+.visible {
+  opacity: 1;
+}
+
+
+/* section presentation */
+
+.section-Presentation{
+  min-height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  position: relative;
+}
+
+.presentation{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-prez{
+  align-self: flex-start;
+  margin-left:-20px;
+}
+
+.section-Presentation img[alt="tache-degrade"]{
+  position: absolute;
+  width:90%;
+  right:55%;
+  bottom: 53%;
+}
+
+.section-Presentation .trait-fushia {
+  position: absolute;
+  top: 10%;
+  left: 23%;
+  rotate: 180deg;
+  width:12%;
+
+}
+
+.section-Presentation .trait-jaune {
+  position: absolute;
+  top: 43%;
+  right: 20%;
+  rotate: 158deg;
+  width:12%;
+}
+
+.en-savoir-plus{
+  display: flex;
+  gap:0.5rem;
+  align-self: flex-end;
+  align-items: center;
+  margin-right: 40px;
+  font-size:1.3rem;
+}
+.en-savoir-plus:hover{
+  color:#F944FF;
+}
+/* FIN section presentation */
+
+/*  section oeuvres */
+
+
+.section-Oeuvres{
+  min-height:100vh;
+  position: relative;
+  padding-right:0!important;
+
+}
+
+.section-Oeuvres h1:nth-child(2){
+  margin-left:50px;
+}
+.container-carrousel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.carousel {
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  }
+
+  .carousel__images img {
+    width: 300px; 
+    object-fit: cover;
+  }
+
+  
+  .carousel__images {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.25s;
+  }
+  
+  .carousel__images img {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+}
+  
+   
+.carousel__button {
+  cursor: pointer;
+  font-size: 2rem;
+  z-index: 1;
+  color: #FFD700;
+  }
+  
+  .carousel__button.previous {
+  left: 30px;
+  }
+  
+  .carousel__button.next {
+  right: 30px;
+  }
+  
+  .voir-oeuvres{
+    display: flex;
+    gap:0.5rem;
+    align-items: center;
+    position: absolute;
+    right: 10%;
+    bottom:5%;
+    font-size:1.3rem;
+  }
+  .voir-oeuvres:hover{
+    color:#F944FF;
+  }
+
+  .section-Oeuvres .trait-fushia {
+    position: absolute;
+    top: 30%;
+    left: 17%;
+    rotate: 180deg;
+    width:12%;
+  }
+  .section-Oeuvres .trait-orange {
+    position: absolute;
+    top: 82%;
+    left: 80%;
+    width:12%;
+
+  
+  }
+
+  .section-Oeuvres img[alt="tache-degrade"]{
+    position:absolute;
+    bottom:80%;
+    left:32%;
+    width:70%;
+
+  }
+
+/* FIN section oeuvres */
+
+
+/**** Fin MOBILE FIRST *****/
+
+
+@media screen and (min-width: 768px) {
+
+  .section-Parcours h2{
+    font-size: 3rem;
+  }
+
+  .decouvrez{
+    top:18%;
+    left:10%;
+
+  }
+  .decouvrez h2{
+    bottom:55%;
+  }
+
+  .nos{
+    left:75%;
+    top:25%;
+  }
+
+  .nos h2{
+    top:-40%;
+    right:85%;
+  }
+
+  .parcours{
+    top:15%;
+    left:35%;
+  }
+
+  .parcours h2{
+    top:68%;
+    left:15%;
+  }
+
+  .parcours img{
+   width:250px;
+  }
+
+  .section-Parcours .trait-fushia1,.trait-jaune1,.trait-orange1,.trait-fushia2,.trait-jaune2,.trait-orange2{
+    width:initial;
+  }
+
+  
+  .en-savoir-plus:hover{
+    color:#F944FF;
+  }
+
+  
+  .section-Presentation img[alt="tache-degrade"]{
+    position: absolute;
+    width:70%;
+    right:70%;
+    bottom: 30%;
+  }
+  .section-Presentation .trait-fushia {
+    position: absolute;
+    top: 10%;
+    left: 23%;
+    rotate: 180deg;
+    width:10%;
+  
+  }
+  
+  .section-Presentation .trait-jaune {
+    position: absolute;
+    top: 48%;
+    right: 25%;
+    rotate: 158deg;
+    width:10%;
+  }
+
+  .section-Oeuvres img[alt="tache-degrade"]{
+    position:absolute;
+    bottom:60%;
+    left:55%;
+    width:50%;
+  
+  }
+
+  .carousel {
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+    }
+  
+    .carousel__images img {
+      width: 300px; 
+      object-fit: cover;
+    }
+
+    .carousel__button {
+    cursor: pointer;
+    font-size: 5rem;
+    z-index: 1;
+    }
+
+  
+    .section-Oeuvres .trait-fushia {
+      position: absolute;
+      top: 28%;
+      left: 30%;
+      rotate: 180deg;
+      width:8%;
+    }
+    .section-Oeuvres .trait-orange {
+      position: absolute;
+      top: 80%;
+      left: 68%;
+      width:8%;
+
+    }
+}
+
+
+@media screen and (min-width:1024px){
+
+  .arrow{
+    font-size:3rem;
+  }
+  .section-Parcours h2{
+    font-size: 3.5rem;
+  }
+
+  .decouvrez{
+    top:18%;
+    left:20%;
+
+  }
+  .decouvrez h2{
+    bottom:55%;
+  }
+
+  .nos{
+    left:70%;
+    top:25%;
+  }
+
+  .nos h2{
+    top:-50%;
+    right:85%;
+  }
+
+  .parcours{
+    top:15%;
+    left:40%;
+  }
+
+  .parcours h2{
+    top:78%;
+    left:30%;
+  }
+
+  .parcours img{
+   width:250px;
+  }
+
+.section-Parcours .arrow{
+  position: absolute;
+  right:-60%;
+  top:87%;
+}
+  .section-Parcours .trait-fushia1{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    rotate: 180deg;
+    width:initial;
+
+  }
+  
+  .section-Parcours .trait-jaune1{
+    position: absolute;
+    top: 5%;
+    left: 55%;
+    width:initial;
+  }
+  
+  .section-Parcours .trait-orange1{
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    rotate: -120deg;
+    width:initial;
+  }
+  
+  .section-Parcours .trait-fushia2{
+    position: absolute;
+    top: 10%;
+    left: 75%;
+    rotate: 80deg;
+    width:initial;
+
+  }
+  
+  .section-Parcours .trait-jaune2{
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    width:initial;
+
+  }
+  
+  .section-Parcours .trait-orange2{
+    position: absolute;
+    top: 70%;
+    left: 60%;
+    width:initial;
+
+  }
+
+  .presentation{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:2rem;
+    align-items: flex-start;
+  }
+
+  img[alt="img-presentation"]{
+    width:200px;
+  }
+
+  .title-prez{
+    align-self: flex-start;
+    margin-left:0;
+  }
+  .section-Presentation img[alt="tache-degrade"]{
+    position: absolute;
+    width:70%;
+    right:70%;
+    bottom: 10%;
+  }
+
+  .text-presentation{
+    width:400px;
+  }
+  
+  .en-savoir-plus:hover{
+    color:#F944FF;
+  }
+
+  .section-Presentation .trait-fushia {
+    position: absolute;
+    top: 23%;
+    left: 15%;
+    rotate: 180deg;
+    width:initial;
+  
+  }
+  
+  .section-Presentation .trait-jaune {
+    position: absolute;
+    top: 64%;
+    right: 55%;
+    rotate: 158deg;
+    width:initial;
+
+  }
+
+  .section-Oeuvres img[alt="tache-degrade"]{
+    position:absolute;
+    bottom: 60%;
+    left:55%;
+    width:45%;
+  
+  }
+  
+  .section-Oeuvres .trait-fushia {
+    position: absolute;
+    top: 23%;
+    left: 30%;
+    rotate: 180deg;
+    width:initial;
+ 
+  }
+  .section-Oeuvres .trait-orange {
+    position: absolute;
+    top: 85%;
+    left: 65%;
+    width:initial;
+
+  
+  }
+
+}
+
+
+
+

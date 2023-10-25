@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les oeuvres{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/oeuvres.css') }}">
+<script type="text/javascript" src="{{ asset('js/oeuvres.js') }}" defer></script>
+{% endblock %}
+
+{% block titre %}
+<h1>Les oeuvres</h1>
+{% endblock %}
+
+{% block main %}
+
+    <!--<table class="table">
+        <tbody>
+        {% for oeuvre in oeuvres %}
+            <tr>
+                <td>{{ oeuvre.id }}</td>
+                <td>{{ oeuvre.nom }}</td>
+                <td>
+                    <a href="{{ path('app_oeuvre_show', {'id': oeuvre.id}) }}">show</a>
+                    <a href="{{ path('app_oeuvre_edit', {'id': oeuvre.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>-->
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('app_oeuvre_new') }}">Create new</a>
+    {% endif %}
+
+
+<!-- VERSION 1.1 -->
+<section class="desc">
+    <p class="description">Venez découvrir les nombreuses œuvres de nos parcours. Ces Street Art ont été réalisé par des artistes passionnés et dévoués à un monde plus coloré, plus vivant. Plongez dans Strasbourg, à travers des peintures, des collages, des fresques, des graffitis... Ils ont dynamisé la vie dans cette capitale européenne. Apprenez à lever les yeux lors de vos balades quotidiennes et pénétrez dans un nouveau monde.</p>
+    <div class="decouv">
+        <h4>Découvrez nos parcours</h4>
+        <a href="{{ path('app_parcours_index') }}"><i class="bi bi-arrow-right-circle"></i></a>
+    </div>
+</section>
+<section>
+    <form method="get" action="{{ path('app_oeuvre_index') }}" class="formb">
+        <label for="category">Trier par :</label>
+        <select name="category" id="category" class="buttonform">
+            <option value="all">Toutes les catégories</option>
+            {% for category in categories %}
+            <option value="{{ category.id }}">{{ category.CatName }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit" class="buttonform btnfo">Filtrer</button>
+    </form>
+
+    <div class="container-card">
+        {% for oeuvre in oeuvres %}
+        <div class="baqueron">
+            <div class="card">
+                <img src="{{oeuvre.photo}}" alt="{{oeuvre.altImg}}">
+                <div class="card-cont">
+                    <h4>{{oeuvre.nom}}</h4>
+                    <p>Par {{oeuvre.artiste}}</p>
+                    <p class="cat">{{oeuvre.relaCat.CatName}}</p>
+                    <a href="{{ path('app_oeuvre_show', {'id': oeuvre.id}) }}"><i class="bi bi-arrow-right-circle"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

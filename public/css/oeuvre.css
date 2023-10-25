@@ -1,0 +1,133 @@
+/* Taille section */
+.oeuvre_spe {
+    /* height: 100vh; */
+    margin-bottom: 10rem;
+}
+
+/* Titre oeuvre */
+.oeuvre_spe h2 {
+    font-size: 2.813rem;
+    text-align: center;
+}
+
+/* Nom artiste */
+.oeuvre_spe h3 {
+    font-size: 2.188rem;
+    margin-top: -1rem;
+    text-align: center;
+}
+
+/* Section image */
+.graf {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.graf img {
+    width: 300px;
+}
+
+/* Description de l'oeuvre */
+
+.desc {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 2rem;
+}
+
+.desc p {
+    width: 80%;
+    text-align: center;
+
+    font-size: 1.1rem;
+}
+
+/* Point maps */
+.adresse {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Espacement */
+    gap: 1rem;
+
+    /* Placement */
+    margin-top: 2rem;
+}
+
+/* Logo maps */
+.adresse i {
+    color: red;
+    font-size: 1.7rem;
+}
+
+.adresse a {
+    font-size: 1.2rem;
+}
+
+/* Découvrez son parcours */
+
+.oeuvre_parc {
+
+    /* Placement */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    /* Espacement */
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.oeuvre_parc p {
+    font-weight: bolder;
+    font-size: 1.313rem;
+    width: 9rem;
+}
+
+.oeuvre_parc i {
+    font-size: 2rem;
+}
+.oeuvre_parc a{
+    text-decoration: none;
+    color:#171302;
+}
+.oeuvre_parc a:hover{
+    color:#F944FF;
+}
+
+.vers_parcours {
+    text-decoration: none;
+    color: black;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .oeuvre_spe {
+        height: 100vh;
+        margin-bottom: 20rem;
+    }
+    .oeuvre_parc {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1rem;
+        margin-top: 0rem;
+        margin-right: 20rem;
+    }
+
+    .oeuvre_parc p {
+        width: 15rem;
+    }
+
+    .desc p {
+        width: 50%;
+    }
+    
+    .graf {
+            width: 100%;
+    }
+}

@@ -1,0 +1,23 @@
+.mentions {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .mentions {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        
+        width: 50%;
+        height: 65vh;
+    }
+}
+
+
+
+
+

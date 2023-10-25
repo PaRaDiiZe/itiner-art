@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{oeuvre.nom}}{% endblock %}
+{% block titre %}
+<h1>{{oeuvre.nom}}</h1>
+{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/oeuvre.css') }}">
+{% endblock %}
+
+{% block main %}
+<section class="oeuvre_spe">
+    <div>
+        <h2>{{ oeuvre.nom }}</h2>
+        <h3>{{ oeuvre.artiste }}</h3>
+        <figure class="graf">
+            <img src="{{ oeuvre.photo }}" alt="{{oeuvre.altImg}}">
+            <figcaption>© {{ oeuvre.credit }}</figcaption>
+        </figure>
+
+        <div class="desc">
+            <p>{{ oeuvre.descriptionO }}</p>
+        </div>
+
+
+        <div class="adresse">
+            <i class="bi bi-geo-alt-fill"></i>
+            <p>{{oeuvre.adresse}}</p>
+        </div>
+
+            <div class="oeuvre_parc">
+                <a href="{{ path('app_parcours_show', {'id': oeuvre.relaOeuvre.id}) }}"><p>Découvrez son parcours</p></a>
+                <a href="{{ path('app_parcours_show', {'id': oeuvre.relaOeuvre.id}) }}"><i class="bi bi-arrow-right-circle"></i></a>
+            </div>
+    </div>
+
+
+</section>
+{% if is_granted('ROLE_ADMIN') %}
+<a href="{{ path('app_oeuvre_index') }}">back to list</a>
+
+<a href="{{ path('app_oeuvre_edit', {'id': oeuvre.id}) }}">edit</a>
+
+{{ include('oeuvre/_delete_form.html.twig') }}
+{% endif %}
+{% endblock %}

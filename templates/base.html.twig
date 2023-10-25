@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="icon" href="{{ asset('image/tache_degrade.png') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ asset('css/base.css') }}">
+
+
+    {% block stylesheets %}
+    {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+
+    {% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+
+</head>
+<header>
+    <div class="se-connecter">
+
+        {% if app.user %}
+            <div><a href="{{ path('app_logout') }}"><i class="bi bi-person-circle">Se déconnecter</i></a></div>
+                {% else %}
+                <a href="{{ path('app_login') }}"><i class="bi bi-person-circle"> Se connecter</i></a>
+        {% endif %}
+    </div>
+    <div class="menu-btn">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <img src="{{ asset('image/rond-noir.png') }}" alt="rond-noir">
+        <img src="{{ asset('image/rond-blanc.png') }}" alt="rond-blanc">
+    </div>
+</header>
+
+<div class="header__nav">
+    <nav class="nav">
+        <div class="icone-connexion__nav">
+            <a href="{{ path('app_login') }}"><i class="bi bi-person-circle"></i></a>
+        </div>
+        <div>
+            <div>
+                <a href="{{ path('home') }}"><img src="{{ asset('image/logo-blanc.png') }}" alt=""></a>
+            </div>
+            <ul class="nav__list">
+                <li><a class="nav__link" href="{{ path('app_parcours_index') }}">Nos Parcours</a></li>
+                <li><a class="nav__link" href="{{ path('app_oeuvre_index') }}">Les Oeuvres</a></li>
+                <li><a class="nav__link" href="{{ path('prez') }}">Qui sommes-nous ?</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+    {# <section class="section-BigTitle">
+    <div class="logo">
+        <a href="index.html"><img src="{{ asset('image/logo-noir.png') }}"alt=""></a>
+    </div> 
+    <aside id="circle-menu">
+        <div class="circle-menu"></div> 
+    </aside>
+</section> #}
+
+
+
+
+ {# <div class="header__nav">
+    <nav class="nav">
+    <ul class="nav__list">
+        <li class="nav__list_item"><a class="nav__link" href="{{ path('home') }}">Accueil</a></li>
+        <li class="nav__list_item"><a class="nav__link" href="{{ path('parcours') }}">Les Parcours</a></li>
+        <li class="nav__list_item"><a class="nav__link" href="{{ path('app_oeuvre_index') }}">Les Oeuvres</a></li>
+        <li class="nav__list_item"><a class="nav__link" href="{{ path('prez') }}">Qui sommes-nous ?</a></li>
+        <li class="nav__list_item"><a class="nav__link" href="{{ path('connexion') }}">Se connecter</a></li>
+    </ul>
+    </nav> 
+</div> #}
+    <body>
+        <section class="section-BigTitle">
+            <div class="logo">
+                {% block titre %}
+
+                {% endblock %}
+            </div> 
+            <img class="hidden" id="tache" src="{{ asset('image/tache_degrade1.png') }}" alt="tache-degrade"/>
+            <img class="hidden" id="tache" src="{{ asset('image/tache_jaune.png') }}" alt="tache-jaune"/>
+            <img class="hidden" id="tache" src="{{ asset('image/tache_violet.png') }}" alt="tache-violet"/>
+            <img class="hidden" id="tache" src="{{ asset('image/tache_orange.png') }}" alt="tache-orange"/>
+            <img class="hidden" id="tache" src="{{ asset('image/tache_violet.png') }}" alt="tache-violet2"/>
+            <img class="hidden" id="tache" src="{{ asset('image/tache_jaune.png') }}" alt="tache-jaune2"/>
+
+
+
+        </section>
+        <div class="zigzag"></div>
+        <main>
+        {% block main %}
+
+        {% endblock %}
+    </main>
+
+    {# <h1>Itiner'Art</h1>
+        <p>Futur site trop stylé</p> #}
+    <footer>
+
+            <div class="footer-div1">
+                <div><a href="{{ path('home') }}"><img src="{{ asset('image/logo-blanc.png') }}" alt=""></a></div>
+                <div class="order-title"><a href="{{ path('app_parcours_index') }}">Nos parcours</a></div>
+                <div><a href="{{ path('app_oeuvre_index') }}">Les oeuvres</a></div>    
+            </div>
+            <li><a href="{{ path('prez') }}">Qui sommes-nous ?</a></li>
+
+        <div class="footer-div2">
+            <div><a href="{{ path('mentions') }}">Mentions légales</a></div>
+            <div class="copyright">© Copyright 2023</div>
+
+    </footer>
+
+    <script src="{{ asset('js/base.js') }}"></script>
+    {% block script %}
+    {% endblock %}
+    </body>
+</html>

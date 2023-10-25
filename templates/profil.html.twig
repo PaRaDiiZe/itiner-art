@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/profil.css') }}">
+{% endblock %}
+
+{% block main %}
+    <section class="section-Profil">
+
+        <div class="mon-profil">
+            <i class="bi bi-person-circle"></i>
+            <div class="bold">Mon profil</div>
+        </div>
+
+        <div class="bold">Bienvenue <span>Pseudo</span></div>
+
+        <div>
+            <div class="bold">Mes informations</div>
+            <div>
+                <div class="infos">
+                    <div>Mon adresse mail :</div> 
+                    <div>utilisateur@domaine.com</div>
+                </div>
+
+                <div class="infos">
+                    <div>Mon mot de passe :</div>
+                    <div>********fin</div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-modif"><a href="">Modifier mes informations</a></div>
+
+        <div class="btn-suppr">Supprimer mon compte</div>
+
+    </section>
+
+    <section class="section-Commentaires">
+
+        <h2>Mes commentaires :</h2>
+
+        <div class="title-comments">
+            <div>Sur le parcours : </div>
+            <div>Quartier de la gare</div>     
+        </div>
+
+        <div class="comments">
+            <div class="notation bold">
+                <div>De: pseudo</div>
+                <div>Note: 2/5 <i class="bi bi-star-fill"></i></div>
+            </div>
+
+            <div>
+                <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. </p>
+            </div>
+
+            <div class="modif-suppr">
+                <div><i class="bi bi-pencil-fill"></i></div>
+                <div><i class="bi bi-trash"></i></div>
+            </div>
+        </div>
+
+        <div class="comments">
+            <div class="notation bold">
+                <div>De: pseudo</div>
+                <div>Note: 2/5 <i class="bi bi-star-fill"></i></div>
+            </div>
+
+            <div>
+                <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. </p>
+            </div>
+
+            <div class="modif-suppr">
+                <div><i class="bi bi-pencil-fill"></i></div>
+                <div><i class="bi bi-trash"></i></div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

@@ -1,0 +1,123 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/accueil.css') }}">
+{% endblock %}
+
+{% block titre %}
+<a href="index.html"><img src="{{ asset('image/logo-noir.png') }}" alt="logo Itiner'art"></a>
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('js/accueil.js') }} " defer></script>
+{% endblock %}
+
+{% block main %}
+{# <section class="section-BigTitle">
+    <div class="logo">
+        <a href="index.html"><img src="{{ asset('image/logo-noir.png') }}"alt=""></a>
+    </div> 
+    <aside id="circle-menu">
+        <div class="circle-menu"></div> 
+        <div class="circle-menu"></div> 
+    </aside>
+</section> #}
+
+<section class="section-Parcours">
+    <div class="list-parcours">
+        <div class="decouvrez">
+            <h2 class="stroke-text">DECOUVREZ</h2>
+            <img src="{{ asset('image/parcours1.png') }}" alt="parcours-1">
+        </div>
+
+        <div class="nos">
+            <h2 class="stroke-text">NOS</h2>
+            <img src="{{ asset('image/parcours2.png') }}" alt="parcours-2">
+        </div>
+
+        <div class="parcours">
+            <img src="{{ asset('image/parcours3.png') }}" alt="parcours-3">
+            <h2>PARCOURS</h2>
+            <div class="arrow"><a href="{{ path('app_parcours_index') }}"><i class="bi bi-arrow-right-circle"></i></a>
+            </div>
+        </div>
+        <img class="trait-fushia1" src="{{ asset('image/traits/trait_fuschia.png')}}" alt="">
+        <img class="trait-jaune1" src="{{ asset('image/traits/trait_jaune.png')}}" alt="">
+        <img class="trait-orange1" src="{{ asset('image/traits/trait_orange.png')}}" alt="">
+        <img class="trait-fushia2" src="{{ asset('image/traits/trait_fuschia.png')}}" alt="">
+        <img class="trait-jaune2" src="{{ asset('image/traits/trait_jaune.png')}}" alt="">
+        <img class="trait-orange2" src="{{ asset('image/traits/trait_orange.png')}}" alt="">
+
+
+    </div>
+</section>
+
+<section class="section-Presentation">
+
+    <div class="presentation">
+        <div>
+            <img src="{{ asset('image/img-presentation.png') }}" alt="img-presentation">
+        </div>
+
+        <div>
+            <h1 class="title-prez">QUI SOMMES-NOUS ?</h1>
+            <img class="tache-presentation hidden" src="{{ asset('image/tache_degrade1.png') }}" alt="tache-degrade"/>
+            <div class="text-presentation">
+                <p>Nous sommes quelques étudiants fans de Street Art.
+                    Nous sommes basés sur Strasbourg, notre ville de coeur. Cette passion, nous vous la partageons à
+                    travers de beaux parcours concoctés par nos soins.
+                </p>
+                <p>Vous aussi, venez découvrir Strasbourg à travers ses Street Art !</p>
+            </div>
+        </div>
+    </div>
+    <img class="trait-fushia" src="{{ asset('image/traits/trait_fuschia.png')}}" alt="">
+    <img class="trait-jaune" src="{{ asset('image/traits/trait_jaune.png')}}" alt="">
+
+
+
+    <div class="en-savoir-plus">
+        <div><a href="{{ path('prez') }}">En savoir plus sur nous</a></div>
+        <div class="arrow"><a href="{{ path('prez') }}"><i class="bi bi-arrow-right-circle"></i></a></div>
+    </div>
+
+
+</section>
+
+<section class="section-Oeuvres">
+
+    <h1>Quelques</h1>
+    <h1>Oeuvres...</h1>
+
+    <div class="container-carrousel">
+        <div class="carousel__button previous" id="previous"><i class="bi bi-chevron-left" id="previous"></i></div>
+        <div class="carousel">
+            <div class="carousel__images">
+                <img src="{{ asset('image/parcours1.png') }}" alt="" id="image">
+                <img src="{{ asset('image/parcours2.png') }}" alt="" id="image">
+                <img src="{{ asset('image/parcours3.png') }}" alt="" id="image">
+                <img src="{{ asset('image/parcours1.png') }}" alt="" id="image">
+                <img src="{{ asset('image/parcours2.png') }}" alt="" id="image">
+            </div>
+        </div>
+        <div class="carousel__button next" id="next"><i class="bi bi-chevron-right" id="next"></i></div>
+
+    </div>
+
+    <div class="voir-oeuvres">
+        <div><a href="{{ path('app_oeuvre_index') }}">Toutes les oeuvres</a></div>
+        <div class="arrow"><a href="{{ path('app_oeuvre_index') }}"><i class="bi bi-arrow-right-circle"></i></a></div>
+    </div>
+
+    <img class="trait-fushia" src="{{ asset('image/traits/trait_fuschia.png')}}" alt="">
+    <img class="trait-orange" src="{{ asset('image/traits/trait_orange.png')}}" alt="">
+
+    <img class="tache-oeuvres hidden" src="{{ asset('image/tache_degrade1.png') }}" alt="tache-degrade"/>
+
+
+</section>
+
+
+{% endblock %}

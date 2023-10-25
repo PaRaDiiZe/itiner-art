@@ -1,0 +1,21 @@
+{{ form_start(form) }}
+
+{{ form_widget(form) }}
+
+<label for="">Catégorie</label>
+<select style="width: 5rem" name="rela_cat">
+    {% for categories in category %}
+        <option value="{{ categories.id }}" {% if oeuvre.relaCat and categories.id == oeuvre.relaCat.id %} selected {% endif %}>{{ categories.CatName }}</option>
+    {% endfor %}
+</select>
+
+<label for="">Parcour</label>
+<select style="width: 5rem" name="rela_oeuvre">
+    {% for parcours in parcour %}
+        <option value="{{ parcours.id }}" {% if oeuvre.RelaOeuvre and parcours.id == oeuvre.RelaOeuvre.id %} selected {% endif %}>{{ parcours.nom }}</option>
+    {% endfor %}
+</select>
+
+<button class="btn">{{ button_label|default('Save') }}</button>
+
+{{ form_end(form) }}

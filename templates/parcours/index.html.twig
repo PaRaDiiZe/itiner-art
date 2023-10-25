@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos Parcours{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/parcours.css') }}">
+<script type="text/javascript" src="{{ asset('js/parcours.js') }}" defer></script>
+{% endblock %}
+
+{% block titre %}
+<h1>Nos Parcours</h1>
+{% endblock %}
+
+{% block main %}
+{# <table class="table">
+    <tbody>
+        {% for parcour in parcours %}
+        <tr>
+            <td>{{ parcour.id }}</td>
+            <td>{{ parcour.nom }}</td>
+            <td>{{ parcour.description }}</td>
+            <td>
+                <a href="{{ path('app_parcours_show', {'id': parcour.id}) }}">show</a>
+                <a href="{{ path('app_parcours_edit', {'id': parcour.id}) }}">edit</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table> #}
+
+{% if is_granted('ROLE_ADMIN') %}
+    <a href="{{ path('app_parcours_new') }}">Create new</a>
+{% endif %}
+
+<section class="desc">
+    <p class="description">Plongez dans le cœur de Strasbourg, à travers ses rues décorées par des artistes passionnés.
+        Ces parcours, plus ou moins long, vous sont proposés avec amour par notre fine équipe</p>
+    <h4>N'attendez plus, suivez nos pas !</h4>
+</section>
+<section>
+    <div class="container-card">
+        {% for parcour in parcours %}
+        {% set moyenne = parcour.getAverageNote() %}
+        <div class="baqueron">
+            <a href="{{ path('app_parcours_show', {'id': parcour.id}) }}">
+                <div class="card">
+                    <div class="card-cont">
+                        <h4>{{parcour.nom}}</h4>
+                        <div class="card-avis">
+                            <p>{{moyenne}}/5</p>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                    <img src="{{parcour.relaOeuvre.first().photo}}" alt="{{parcour.relaOeuvre.first().altImg}}">
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

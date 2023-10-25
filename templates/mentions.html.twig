@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/mentions.css') }}">
+{% endblock %}
+
+{% block titre %}
+<h1>Mentions légales</h1>
+{% endblock %}
+
+
+{% block main %}
+<section class="mentions">
+    <p>Les présentes conditions générales fixent les modalités d'utilisation du service web <a
+            href="#">www.intinerart.fr</a></p>
+
+    <p>L'utilisateur recconait avoir pris conaissance de ce document et accepté l'ensemble de ces informations, que
+        cet usage soit à titre personnel ou professionnel. SI cet usage fait à titre professionnel, l'utilisateur
+        garantit détenir les pouvoirs nécessaires pour accepter ces conditions générales au sein de son organisation.
+    </p>
+
+    <h3>Editeur et responsable de publication</h3>
+    <p>Ce site personnel non déclaré à la CNIL a été par CELMA Annelise, FALCH Maëlle et HUOT Anthony durant un projet d'étude.</p>
+
+    <h3>Hébergement</h3>
+    <p>Ce site est hébergé sur <a href="https://www.plesk.com/">Plesk Obsidian</a></p>
+</section>
+
+{% endblock %}

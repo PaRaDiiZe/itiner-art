@@ -1,0 +1,156 @@
+
+.titre {
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.images img {
+    position: absolute;
+}
+
+.tache {
+    top: 0;
+    left: 4rem;
+    width: 30rem;
+}
+
+.tache2 {
+    left: 0;
+    top: 18rem;
+    width: 15rem;
+}
+
+.tache3 {
+    right: 0;
+    width: 30rem;
+    top: 25rem;
+}
+
+.tache4 {
+    width: 14rem;
+    left: 0rem;
+    bottom: 5rem;
+}
+
+.titre_texte {
+    font-family: "Sedgwick Ave Display";
+    color: #D44BD9;
+    
+    font-size: 4rem;
+}
+
+
+
+
+/* LES modifs de Maëlle */
+
+.desc h4{
+    text-align: center;
+}
+.description{
+    width:75%;
+    margin: auto;
+    margin-top:50px;
+}
+@media screen and (min-width:1024px){
+    .description{
+        width:50%;
+    }
+}
+
+.bg{
+    background-color: darkblue;
+    height:15%;
+}
+
+
+/* les cardsss */
+.baqueron{
+    overflow:hidden;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    margin:auto;
+    height:400px;
+    width:300px;
+}
+.baqueron a{
+    width: 250px;
+    margin: auto;
+    display: block;
+}
+
+.container-card{
+    display: flex;
+    flex-wrap: wrap;
+    width:75%;
+    margin: auto;
+}
+.card {
+    overflow:hidden;
+    border-radius: 25p;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    height:350px;
+    width:250px;
+    display:flex;
+    flex-direction: column;
+    margin:auto;
+    position:relative;
+    background-color: #171302;
+}
+.card img{
+    height:100%;
+    object-fit:cover;
+    opacity:0.7;
+    z-index:1;
+}
+.opac{
+    opacity:1 !important;
+}
+.card-cont{
+    background-color:#FF8C00;
+    color:#171302;
+    height:40%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom:5px;
+    padding-top:5px;
+    position:relative;
+    border-bottom-left-radius:150px;
+    border-bottom-right-radius:150px;
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.card-avis{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position:absolute;
+    top:-20px;
+    right:10px;
+    font-size:1.5rem;
+    font-weight: bold;
+    gap:10px;
+}
+.card-avis i{
+    color:#FFD700;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+.card h4{
+    font-size:1.5rem;
+    font-weight: bold;
+    width: 50%;
+    text-align: center;
+}

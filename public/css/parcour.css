@@ -1,0 +1,275 @@
+.parcours_intro {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.note_parc {
+    display: block;
+    text-align: right;
+    font-weight: bolder;
+    font-size:1.1rem;
+}
+
+.parcours_intro p {
+    width: 50%;
+}
+
+.parcours_intro h4 {
+    width: 50%;
+    text-align: center;
+    font-size:1.8rem;
+}
+
+div#carte {
+    height: 25rem;
+}
+
+div.cadre {
+    border: 1px solid black;
+    padding: 0.313rem;
+}
+
+#select-note {
+    width: 2rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.parcours_prez {
+    height: 100vh;
+    margin: auto;
+}
+
+
+.commentaire_parc {
+    /* Espacement des différents champs */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    padding:20px 50px 20px 50px; 
+}
+
+
+.comments{
+    width: 50%;
+    background-color:#fff1a2;
+    padding: 20px;
+    border-radius: 30px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.notation{
+    display: flex;
+    justify-content: space-around;
+}
+.bold{
+    font-weight: bold;
+}
+.notation i{
+    color:#FFD700
+}
+
+.formulaire {
+    text-align: center;
+}
+
+.connexion {
+    text-align: center;
+}
+
+.connexion a {
+    font-style: italic;
+}
+
+.test {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.test2 {
+    /* Emplacement */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.formulaire textarea {
+    width: 17rem;
+    height: 6rem;
+}
+
+
+.commentaire_show {
+    background: lightgray;
+    margin: auto;
+    border-radius: 2rem;
+    width: 22rem;
+    height: 16.5rem;
+
+}
+
+.comment_pseu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+
+}
+
+.comment_txt {
+    width: 16rem;
+    margin: auto;
+}
+
+/* section oeuvres */
+.oeuvres {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.oeuvres button{
+    display:none;
+}
+.oeuvres button i{
+    font-size:2rem;
+}
+
+.caroussel {
+    margin-top: 2rem;
+    background: #FFD700;
+    margin-bottom: 100px;
+}
+.caroussel h2{
+    font-family: 'Tanker';
+    font-size:2rem;
+}
+.vue{
+    display:flex !important;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.image {
+    width: 50%;
+    height: 50%;
+    margin-top:50px;
+}
+.desc {
+    width: 50%;
+}
+
+.adresse_parc {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+/* Logo maps */
+.adresse_parc i {
+    color:red;
+    font-size: 1.7rem;
+    padding-right: 2rem;
+}
+.adresse_parc a {
+    font-size: 1.2rem;
+    margin-right: 3rem;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .note_parc {
+        font-size: 1.25rem;
+    }
+
+    .parcours_intro {
+        font-size: 1.15rem;
+    }
+
+    .parcours_intro h4 {
+        font-size:2rem;
+    }
+
+
+    .parcour_prez {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    div#carte {
+        height:75%;
+        width: 80%;
+    }
+
+
+    /* Section oeuvres */
+    .oeuvres button{
+        background-color:#FFFDF3;
+        border:none;
+        cursor: pointer;
+    }
+    .caroussel {
+        width: 80%;
+    }
+
+    .vue{
+        flex-direction: row;
+    }
+    .image {
+        width: 25%;
+        height: 25%;
+        margin-top:0;
+    }
+
+    .adresse_parc i {
+        font-size: 1.7rem;
+        padding-right: 2rem;
+    }
+    .adresse_parc a {
+        font-size: 1.2rem;
+        margin-right: 3rem;
+    }
+    .desc {
+        width: auto;
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+    }
+
+
+
+    #before,
+    #after {
+        display: contents;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .comment_txt {
+        width: fit-content;
+        margin: auto;
+    }
+
+    .comment_txt p {
+        width: 20rem;
+    }
+}
